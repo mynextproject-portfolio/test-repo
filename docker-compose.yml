@@ -1,0 +1,25 @@
+services:
+  app:
+    build: 
+      context: .
+      target: development
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    
+  # Service for running tests
+  test:
+    build: 
+      context: .
+      target: test
+    environment:
+      - NODE_ENV=test
+    volumes:
+      - .:/app
+      - /app/node_modules
+    profiles:
+      - test 
