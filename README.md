@@ -1,4 +1,4 @@
-# Fastify Ping-Pong Template
+# Fastify Ping-Pong Template!!
 
 A Fastify app template for implementing ping and health endpoints.
 
